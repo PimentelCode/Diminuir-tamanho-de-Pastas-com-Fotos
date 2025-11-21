@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import os
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 from typing import Dict, List
@@ -77,7 +78,8 @@ def process_directory(
     confirm: bool,
     output_report: Path | None,
 ) -> Dict:
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", filename="photo-slimmer.log")
+    use_file = not os.environ.get("VERCEL")
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s", filename=("photo-slimmer.log" if use_file else None))
     files = _iter_files(dir_path, recursive)
     output_root = dir_path / "optimized"
     in_place = bool(confirm)

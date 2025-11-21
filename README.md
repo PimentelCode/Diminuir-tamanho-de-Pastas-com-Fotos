@@ -1,4 +1,4 @@
-# OptiPix
+# OptiPix (antes: photo-slimmer)
 
 Otimização segura e rápida de lotes de fotos com relatórios e UI web simples.
 
@@ -161,5 +161,4 @@ Status atual: `3 passed`. Cobrem preview, dry-run e geração de relatório.
 ## Boas Práticas e Recomendações
 - Qualidade vs tamanho: `quality 80–90` em WebP costuma equilibrar artefatos e redução.
 - Para lotes grandes, usar `workers = cpu_count - 1` e limitar `max_width/max_height` para conter memória.
-
 - Manter EXIF aumenta tamanho; para lotes massivos, prefira `--strip-exif` quando metadados não forem críticos.
