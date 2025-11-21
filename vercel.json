@@ -1,14 +1,9 @@
 {
   "functions": {
-    "api/index.py": {
-      "runtime": "python3.11",
+    "api/*.py": {
+      "runtime": "vercel-python@3.11",
       "maxDuration": 10,
       "memory": 1024
     }
-  },
-  "routes": [
-    { "src": "^/api/preview$", "dest": "api/index.py" },
-    { "src": "^/api/optimize$", "dest": "api/index.py" },
-    { "src": "^/(.*)$", "dest": "/public/$1" }
-  ]
+  }
 }
