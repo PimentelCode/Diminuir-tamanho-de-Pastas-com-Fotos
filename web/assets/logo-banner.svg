@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="256" viewBox="0 0 1024 256" role="img" aria-label="OptiPix banner">
+  <defs>
+    <linearGradient id="gb" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#22c55e" />
+      <stop offset="1" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1024" height="256" fill="#0f172a" />
+  <g transform="translate(40,40)">
+    <rect x="0" y="0" width="120" height="120" rx="24" fill="url(#gb)" />
+    <circle cx="60" cy="60" r="36" fill="#0f172a" />
+    <circle cx="60" cy="60" r="22" fill="#e2e8f0" />
+    <text x="160" y="92" font-family="system-ui, Arial, sans-serif" font-size="72" fill="#e2e8f0" font-weight="800">OptiPix</text>
+    <text x="160" y="132" font-family="system-ui, Arial, sans-serif" font-size="24" fill="#94a3b8">Otimização segura e rápida de lotes de fotos</text>
+  </g>
+</svg>

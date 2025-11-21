@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "photo-slimmer"
+version = "0.1.0"
+description = "Otimizador de imagens em lote (CLI + web)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "Pillow==10.4.0",
+  "Flask==3.0.0",
+  "tqdm==4.66.5",
+  "PyYAML==6.0.2",
+  "pytest==8.3.3",
+]
+
+[project.scripts]
+photo-slimmer = "cli:main"
+optipix = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli", "server", "processor", "utils", "config"]
+package-dir = {"" = "src"}

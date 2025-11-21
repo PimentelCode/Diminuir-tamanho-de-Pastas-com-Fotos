@@ -1,0 +1,6 @@
+quality: 85
+webp: true
+max_width: 1920
+max_height: 1080
+keep_exif: false
+workers: 7

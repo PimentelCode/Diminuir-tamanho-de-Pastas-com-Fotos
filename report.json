@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "total_files": 0,
+    "optimized_files": 0,
+    "unsupported_files": 0,
+    "error_files": 0,
+    "bytes_before": 0,
+    "bytes_after": 0,
+    "bytes_saved": 0,
+    "percent_saved": 0.0,
+    "in_place": false,
+    "dry_run": false
+  },
+  "results": []
+}

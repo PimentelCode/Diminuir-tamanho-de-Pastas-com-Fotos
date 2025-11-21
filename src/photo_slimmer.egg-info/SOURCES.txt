@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+src/cli.py
+src/config.py
+src/processor.py
+src/server.py
+src/utils.py
+src/photo_slimmer.egg-info/PKG-INFO
+src/photo_slimmer.egg-info/SOURCES.txt
+src/photo_slimmer.egg-info/dependency_links.txt
+src/photo_slimmer.egg-info/entry_points.txt
+src/photo_slimmer.egg-info/requires.txt
+src/photo_slimmer.egg-info/top_level.txt
+tests/test_processor.py

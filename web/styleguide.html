@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OptiPix – Guia de Estilo</title>
+  <link rel="icon" href="/web/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/web/styles.css">
+  <style>
+    .tokens { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .token { border: 1px solid var(--border); border-radius: 8px; padding: 12px; background: var(--card); }
+    .swatch { height: 48px; border-radius: 6px; margin-bottom: 8px; }
+    .component-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: var(--card); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="brand">
+      <img src="/web/assets/logo.svg" alt="OptiPix" class="logo" width="160" height="40">
+      <h1>Guia de Estilo</h1>
+    </header>
+    <p>Identidade visual, tokens, componentes e padrões de interação para OptiPix.</p>
+
+    <h2>Identidade</h2>
+    <img src="/web/assets/logo-banner.svg" alt="Banner OptiPix" width="1024" height="256" style="max-width:100%">
+
+    <h2>Paleta e Tokens</h2>
+    <div class="tokens">
+      <div class="token"><div class="swatch" style="background:var(--bg)"></div>BG</div>
+      <div class="token"><div class="swatch" style="background:var(--fg)"></div>FG</div>
+      <div class="token"><div class="swatch" style="background:var(--primary)"></div>Primary</div>
+      <div class="token"><div class="swatch" style="background:var(--accent)"></div>Accent</div>
+    </div>
+
+    <h2>Componentes</h2>
+    <div class="component-list">
+      <div class="card">
+        <h3>Botões</h3>
+        <a class="btn" href="#">Padrão</a>
+        <button class="btn primary">Primário</button>
+      </div>
+      <div class="card">
+        <h3>Inputs</h3>
+        <label>Qualidade <input type="number" value="85" min="1" max="100"></label>
+      </div>
+      <div class="card">
+        <h3>Área de Upload</h3>
+        <div class="drop">Arraste arquivos</div>
+      </div>
+    </div>
+
+    <h2>Padrões de Interação</h2>
+    <ul>
+      <li>Feedback imediato em ações (texto de status e indicador de progresso).</li>
+      <li>Alvo clicável com foco e tecla Enter/Space na área de upload.</li>
+      <li>Estados hover/active/focus visíveis e acessíveis.</li>
+    </ul>
+
+    <h2>Responsividade</h2>
+    <p>Layouts em grid com colunas fluídas; componentes se adaptam com CSS variables e media queries.</p>
+
+    <h2>Assets</h2>
+    <ul>
+      <li><a href="/web/assets/logo.svg" target="_blank">logo.svg</a></li>
+      <li><a href="/web/assets/logo-banner.svg" target="_blank">logo-banner.svg</a></li>
+      <li><a href="/web/assets/favicon.svg" target="_blank">favicon.svg</a></li>
+    </ul>
+  </div>
+</body>
+</html>
