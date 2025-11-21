@@ -61,16 +61,15 @@ def main() -> None:
         if not args.path:
             raise SystemExit("Informe o arquivo para preview")
         res = processor.preview_file(Path(args.path), cfg)
-        def fmt(n: int) -> str:
-            if n >= 1024 * 1024:
-                return f"{(n / (1024 * 1024)):.2f} MB"
-            if n >= 1024:
-                return f"{(n / 1024):.2f} KB"
-            return f"{n} bytes"
-        percent = f"{res.get('percent_saved', 0):.1f}%"
+        def fmt(b: int) -> str:
+            if b < 1024:
+                return f"{b} bytes"
+            if b < 1024 * 1024:
+                return f"{b / 1024:.2f} KB"
+            return f"{b / (1024 * 1024):.2f} MB"
         print(f"Original: {fmt(res['original_size'])}")
         print(f"Estimado: {fmt(res['estimated_new_size'])}")
-        print(f"Redução: {percent}")
+        print(f"Redução: {res['percent_saved']}%")
 
 
 if __name__ == "__main__":

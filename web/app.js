@@ -79,11 +79,10 @@ previewBtn.addEventListener('click', async () => {
   const res = await fetch('/api/preview', { method: 'POST', body: form });
   if (!res.ok) { statusEl.textContent = 'Falha no preview'; return; }
   const data = await res.json();
-  const fmt = (n) => {
-    if (n >= 1024 * 1024) return `${(n / (1024 * 1024)).toFixed(2)} MB`;
-    if (n >= 1024) return `${(n / 1024).toFixed(2)} KB`;
-    return `${n} bytes`;
+  const fmt = (b) => {
+    if (b < 1024) return `${b} bytes`;
+    if (b < 1024 * 1024) return `${(b / 1024).toFixed(2)} KB`;
+    return `${(b / (1024 * 1024)).toFixed(2)} MB`;
   };
-  const percent = typeof data.percent_saved === 'number' ? `${data.percent_saved.toFixed(1)}%` : `${data.percent_saved}%`;
-  statusEl.textContent = `Original: ${fmt(data.original_size)}\nEstimado: ${fmt(data.estimated_new_size)}\nRedução: ${percent}`;
+  statusEl.textContent = `Original: ${fmt(data.original_size)}\nEstimado: ${fmt(data.estimated_new_size)}\nRedução: ${data.percent_saved}%`;
 });
